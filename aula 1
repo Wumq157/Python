@@ -1,0 +1,22 @@
+#nome = input("Escreva seu nome: ")
+#try:
+#    idade = int(input("Escreva sua idade: ")) 
+#except ValueError:
+#    print("Você não digitou um número")
+#    exi()  
+#
+#menorMaior = ""  
+#if idade >= 18:
+#    menorMaior = "Você é maior de idade."
+#else:  
+#    menorMaior = "Você é menor de idade." 
+#
+#print(f"Olá {nome}, você tem {idade} anos, portanto, {menorMaior}") 
+try:
+    num1 = float(input("Escreva o primeiro numero:"))
+    num2 = float(input("Escreva o segundo numero:"))
+    resultado = num1 + num2
+    print (f"O resultado é igual a: {resultado}")  
+except ValueError:
+    print ("Você digitou um valor valido.")  
+    
