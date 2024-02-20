@@ -1,0 +1,20 @@
+try:
+    nota = float(input("Escreva sua nota: ")) 
+except ValueError:
+    print("Você digitou uma nota errada.")
+    
+else:
+    if nota > 100:
+        print("Você digitou uma nota errada.")
+    elif nota <= 30:
+        print("Sua nota foi: F")
+    elif nota <= 60:
+        print("Sua nota foi: C")
+    elif nota <= 75:
+        print("Sua nota foi: B")
+    elif nota <= 90:
+        print("Sua nota foi: A")
+    elif nota < 100:
+        print("Sua nota foi: A+")
+    else:
+        print("Sua nota foi: S")
