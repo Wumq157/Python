@@ -1,0 +1,20 @@
+# Definindo as tuplas com os meses de cada estação do ano
+primavera = ('março', 'abril', 'maio')
+verao = ('junho', 'julho', 'agosto')
+outono = ('setembro', 'outubro', 'novembro')
+inverno = ('dezembro', 'janeiro', 'fevereiro')
+
+# Obtendo o mês digitado pelo usuário
+mes = input("Digite o mês: ").lower()
+
+# Verificando em qual estação está o mês digitado
+if mes in primavera:
+    print("Primavera")
+elif mes in verao:
+    print("Verão")
+elif mes in outono:
+    print("Outono")
+elif mes in inverno:
+    print("Inverno")
+else:
+    print("Mês inválido ou fora do período considerado.")
