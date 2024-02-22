@@ -1,8 +1,10 @@
 import random
-
-maxNumero = int(input("Digite até qual numero devemos sortear."))
-maxTentativas = int(input("Para definir a dificuldade vamos definir a quantidade de tentativas:"))
-
+try:
+    maxNumero = int(input("Digite até qual numero devemos sortear."))
+    maxTentativas = int(input("Para definir a dificuldade vamos definir a quantidade de tentativas:"))
+except ValueError:
+    print ("Você digitou algum dos valores invalidos.")
+    
 numero = random.randint(1, maxNumero)
 escolha = 0
 tentativas = 0 
