@@ -7,11 +7,11 @@ maxTentativas = 5
 
 print ("Vamos começar o jogo!!!")
 print (f"Você tem {maxTentativas} tentativas")
-while tentativas < 5:
+while tentativas < maxTentativas:
     escolha = int(input("Escolha um número:"))
     tentativas += 1
     if escolha == numero:
-        print (f"Parabéns você acertou o numero {numero} com {tentativas} tentativas")
+        print (f"Parabéns você acertou o numero com {tentativas} tentativas")
         break
     elif escolha - 1 == numero:
         print ("Talvez seja um pouco mais baixo....")
@@ -21,5 +21,6 @@ while tentativas < 5:
         print (f"Talvez seja um valor abaixo de {escolha}")
     elif escolha < numero:
         print (f"Talvez seja um valor acima de {escolha}")
+    print (f"Você ainda tem {tentativas} tentativas")
    
 print ("Obrigado por jogar.")
