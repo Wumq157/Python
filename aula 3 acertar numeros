@@ -27,6 +27,6 @@ while tentativas < maxTentativas:
         print (f"Talvez seja um valor abaixo de {escolha}")
     elif escolha < numero:
         print (f"Talvez seja um valor acima de {escolha}")
-    print (f"Você ainda tem {tentativas} tentativas")
+    print (f"Você ainda tem {tentativasRestantes} tentativas")
    
 print ("Obrigado por jogar.")
