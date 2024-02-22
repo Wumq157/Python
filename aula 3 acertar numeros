@@ -1,15 +1,21 @@
 import random
 
-numero = random.randint(1,10)
+maxNumero = int(input("Digite até qual numero devemos sortear."))
+maxTentativas = int(input("Para definir a dificuldade vamos definir a quantidade de tentativas:"))
+
+numero = random.randint(1, maxNumero)
 escolha = 0
 tentativas = 0 
-maxTentativas = 5
+
 
 print ("Vamos começar o jogo!!!")
 print (f"Você tem {maxTentativas} tentativas")
 while tentativas < maxTentativas:
-    escolha = int(input("Escolha um número:"))
+    
     tentativas += 1
+    tentativasRestantes = maxTentativas - tentativas
+    escolha = int(input("Escolha um número:"))
+    
     if escolha == numero:
         print (f"Parabéns você acertou o numero com {tentativas} tentativas")
         break
