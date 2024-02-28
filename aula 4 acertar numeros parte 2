@@ -10,32 +10,37 @@ def dificuldade():
     return dificuldade
 
 def pontuacao(tentativas):
-    pontuacaoPor = (1000 / tentativas)
+    pontuacaoPor = 1000 / (tentativas - (tentativas / 2))
     return pontuacaoPor
 
 dificuldade_escolhida = dificuldade()
 maxTentativas = 10 if dificuldade_escolhida == 1 else 7 if dificuldade_escolhida == 2 else 5 if dificuldade_escolhida == 3 else int(input("Digite o número de tentativas desejado: "))
 maxNumero = 10 if dificuldade_escolhida == 1 else 50 if dificuldade_escolhida == 2 else 100 if dificuldade_escolhida == 3 else int(input("Digite o número máximo que será sorteado: "))
-pontuacao = 1000
 tentativas = 0
 pontuacaoPorTentativa = pontuacao(maxTentativas)
+pontuacaoAtual = 1000
 
 numero = random.randint(1, maxNumero)
 
 while tentativas < maxTentativas:
     tentativas += 1
     tentativasRestantes = maxTentativas - tentativas
-    pontuacao = pontuacaoPorTentativa - pontuacao
+    pontuacaoAtual -= pontuacaoPorTentativa
     numeroEscolhido = int(input(f"Escolha um numero entre 0 e {maxNumero}: "))
-    if numeroEscolhido == numeroEscolhido
+
+    if numeroEscolhido == numero:
         print (f"Você acertou o numero sorteado em {tentativas}")
+        print (f"Sua pontuação foi de {pontuacaoAtual} Pontos.")
+        break
     elif numeroEscolhido > numero:
         print (f"O numero escolhido é menor que o numero que você escolheu.")
         print (f"Você ainda tem {tentativasRestantes}")
-        print (f"Sua pontuação atual é {pontuacao}") 
+        print (f"Sua pontuação atual é {pontuacaoAtual}") 
     elif numeroEscolhido < numero:
         print (f"O numero escolhido é maior que o numero que você escolheu.")
         print (f"Você ainda tem {tentativasRestantes}")
-        print (f"Sua pontuação atual é {pontuacao}") 
+        print (f"Sua pontuação atual é {pontuacaoAtual}") 
     else:
         print (f"Bah guri, não deveria cair nesse else, oque você digitou ai?")
+    
+print (f"Infelizmente você perder, Obrigado por jogar. Tente novamente!")
