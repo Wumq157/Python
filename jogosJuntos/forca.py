@@ -1,4 +1,5 @@
-def = jogarFo():
+import jogos
+def jogarFo():
     secreta = "viado"
     letrasAcertadas = ["_", "_", "_", "_", "_"]
     tentativas = 7
@@ -21,4 +22,6 @@ def = jogarFo():
         print(f"Parabéns, você ganhou Nada <3")
     else:
         print(f"Que pena, você perdeu. a palavra era {secreta}")
-jogarFo()
+    jogos.jogarFo()
+if (__name__ == "__main__"):
+    jogarFo()
