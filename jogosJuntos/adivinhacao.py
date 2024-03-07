@@ -1,4 +1,5 @@
-    import random
+import random
+import jogos
 def jogarAd():
     def dificuldade():
         print("Temos 3 tipos de dificuldade além da personalizada.")
@@ -44,4 +45,6 @@ def jogarAd():
             print (f"Bah guri, não deveria cair nesse else, oque você digitou ai?")
         
     print (f"Infelizmente você perdeu, Obrigado por jogar. Tente novamente!")
-jogarAd()
+    jogos.escolhaJogo()
+if (__name__ == "__main__"):
+    jogarAd()
