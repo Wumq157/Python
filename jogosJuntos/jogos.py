@@ -14,5 +14,5 @@ def escolhaJogo():
         adivinhacao.jogarAd()
     else:
         print("Você digitou um valor inválido.")
-
-escolhaJogo()
+if (__name__ == "__main__"):
+    escolhaJogo()
