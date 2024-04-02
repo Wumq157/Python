@@ -20,6 +20,9 @@ def carregarLista():
     except FileNotFoundError:
         print("Arquivo não encontrado.")
         return []
+    except Exception as e:
+        print("OCORREU UM ERRO: ",e)
+        return
 
 def main():
     lista = []
