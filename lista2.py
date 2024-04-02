@@ -13,6 +13,7 @@ def carregarLista():
     lista_carregada = []
     try:
         with open(nomeArq, "r") as arquivo:
+            lista_carregada.clear()
             for linha in arquivo:
                 lista_carregada.append(linha.strip())  # Remove qualquer espaço em branco adicional
         print(f"Lista carregada com sucesso do arquivo: {nomeArq}")
@@ -23,6 +24,11 @@ def carregarLista():
     except Exception as e:
         print("OCORREU UM ERRO: ",e)
         return
+    
+def ordenar_lista(lista):
+    lista_ordenada = sorted(reverse=True)
+    print("Lista ordenada com sucesso:", lista_ordenada)
+    return lista_ordenada
 
 def main():
     lista = []
@@ -35,7 +41,8 @@ def main():
         print("3. Mostrar lista atual")
         print("4. Gravar lista")
         print("5. Carregar lista")
-        print("6. Sair")
+        print("6. Ordenar Lista")
+        print("7. Sair")
         print("==============================================\n")
         print("----===+===----")
         escolha = input("Escolha uma opção: ")
@@ -74,7 +81,9 @@ def main():
             gravarLista(lista)
         elif escolha == '5':
             lista = carregarLista()
-        elif escolha == '6':
+        elif escolha == "6":
+            lista = ordenar_lista(lista)
+        elif escolha == '7':
             print("----===+===----")
             print("Encerrando o programa.")
             print("")
